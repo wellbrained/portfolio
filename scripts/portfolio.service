@@ -1,0 +1,22 @@
+[Unit]
+Description=Portfolio Nuxt production
+After=network.target
+
+[Service]
+User=portfolio
+Group=portfolio
+WorkingDirectory=/srv/portfolio/current
+Environment=NODE_ENV=production
+Environment=HOST=127.0.0.1
+Environment=PORT=3800
+ExecStart=/usr/local/bin/node .output/server/index.mjs
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target

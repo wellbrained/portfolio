@@ -1,0 +1,29 @@
+#!/bin/bash
+set -euo pipefail
+release=${1:?Release name required}
+[[ "$release" =~ ^[0-9]{14}-[a-f0-9]{12}$ ]] || exit 2
+dest="/srv/portfolio/releases/$release"
+mkdir "$dest"
+tar -xzf "/tmp/portfolio-$release.tar.gz" -C "$dest"
+chown -R portfolio:portfolio "$dest"
+runuser -u portfolio -- bash -c 'cd "$1" && pnpm install --frozen-lockfile && pnpm lint && pnpm typecheck && pnpm test && pnpm build' bash "$dest"
+previous=$(readlink -f /srv/portfolio/current || true)
+systemctl stop portfolio.service
+if [ -n "$previous" ]; then ln -sfn "$previous" /srv/portfolio/previous; fi
+ln -sfn "$dest" /srv/portfolio/current
+systemctl start portfolio.service
+healthy=false
+for attempt in $(seq 1 30); do
+  if curl --fail --silent http://127.0.0.1:3800/api/health | grep -q '"app":"portfolio"'; then healthy=true; break; fi
+  sleep 1
+done
+if [ "$healthy" != true ]; then
+  systemctl stop portfolio.service
+  if [ -n "$previous" ]; then
+    ln -sfn "$previous" /srv/portfolio/current
+    systemctl start portfolio.service
+  fi
+  echo 'Health check failed; previous release restored when available.' >&2
+  exit 1
+fi
+echo "Deployed $release"
