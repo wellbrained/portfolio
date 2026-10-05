@@ -1,10 +1,16 @@
 {
   "name": "portfolio",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "type": "module",
   "packageManager": "pnpm@12.9.1",
-  "devEngines": { "packageManager": { "name": "pnpm", "version": "12.9.1", "onFail": "download" } },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.9.1",
+      "onFail": "download"
+    }
+  },
   "scripts": {
     "dev": "nuxt dev --port 3006",
     "build": "nuxt build",
@@ -14,6 +20,18 @@
     "typecheck": "nuxt typecheck",
     "test": "vitest run --passWithNoTests"
   },
-  "dependencies": { "nuxt": "^4.5.2", "vue": "^3.5.43", "vue-router": "^5.3.1" },
-  "devDependencies": { "@nuxt/eslint": "^1.17.0", "eslint": "^10.12.0", "typescript": "^6.0.3", "vue-tsc": "^3.3.12", "vitest": "^5.0.3" }
+  "dependencies": {
+    "@nuxt/content": "^3.16.1",
+    "better-sqlite3": "^13.0.3",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.12.0",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.3",
+    "vue-tsc": "^3.3.12"
+  }
 }
