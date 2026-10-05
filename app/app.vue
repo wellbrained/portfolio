@@ -5,7 +5,15 @@
         to="/"
         class="logo"
         aria-label="Portfolio home"
-      >DK.</NuxtLink>
+      >
+        <img
+          src="/logo.png"
+          alt=""
+          width="48"
+          height="48"
+        >
+        <span>DK.</span>
+      </NuxtLink>
       <nav aria-label="Main navigation">
         <NuxtLink to="/">Home</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
@@ -32,7 +40,8 @@ a { color: inherit; cursor: pointer; text-underline-offset: .2em; }
 a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .site-shell { min-height: 100svh; max-width: 1200px; margin: auto; padding: 32px clamp(24px, 6vw, 80px); display: flex; flex-direction: column; }
 .site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-.logo { text-decoration: none; font-size: 28px; font-weight: 800; }
+.logo { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-size: 28px; font-weight: 800; }
+.logo img { display: block; width: 48px; height: 48px; object-fit: contain; }
 nav { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; }
 nav a { color: #62635d; text-decoration: none; }
 nav a:hover, nav a.router-link-exact-active { color: #252622; text-decoration: underline; }
