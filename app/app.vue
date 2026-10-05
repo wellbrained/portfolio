@@ -7,7 +7,7 @@
         aria-label="Portfolio home"
       >
         <img
-          src="/logo.png"
+          src="/logo.png?v=1.4"
           alt=""
           width="48"
           height="48"
