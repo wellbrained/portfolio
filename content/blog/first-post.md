@@ -1,12 +1,12 @@
 ---
+layout: article
+readingTime: 1
 title: A fresh start
 description: An example first post introducing this portfolio.
 date: '2026-10-05'
 tags:
   - personal
 ---
-
-# A fresh start
 
 *Example post — a starting point to edit in your own voice.*
 
@@ -20,4 +20,4 @@ Over time, I'll add selected work, a little about myself and occasional notes ab
 
 The full site is still taking shape. For now, this is the beginning.
 
-[Back to the blog](/blog)
+[Back to the journal](/blog)

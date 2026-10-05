@@ -1,9 +1,8 @@
 ---
+layout: page
 title: About me
 description: A little about Dominik Kiessling. Full introduction coming soon.
 ---
-
-# About me
 
 I'm Dominik Kiessling. This is where I'll share my background and the things I enjoy working on. My full introduction is coming soon.
 

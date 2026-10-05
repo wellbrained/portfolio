@@ -1,9 +1,13 @@
 ---
+layout: project
+role: Your role here
+tools: []
+focus: Case study
+tags:
+  - Example
 title: Example project
 description: A starter case study to replace with one of your own projects.
 ---
-
-# Example project
 
 *This is example content, not a finished project. Replace it with your own work.*
 
