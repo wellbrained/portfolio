@@ -5,10 +5,10 @@ export default defineNuxtConfig({
     head: {
       htmlAttrs: { lang: 'en' },
       title: 'D. Kiessling — Portfolio',
-      meta: [{ name: 'description', content: 'The personal portfolio of D. Kiessling. Projects and more, coming soon.' }],
-      link: [{ rel: 'canonical', href: 'https://dkiessling.de/' }]
+      meta: [{ name: 'description', content: 'The personal portfolio of D. Kiessling. Projects and more, coming soon.' }]
     }
   },
+  content: { database: { type: 'sqlite', filename: ':memory:' } },
   compatibilityDate: '2026-10-05',
   nitro: { preset: 'node-server' },
   typescript: { strict: true },
