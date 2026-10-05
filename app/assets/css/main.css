@@ -427,3 +427,9 @@ footer {
 .prose :is(h2, h3) a:hover {
   color: var(--accent);
 }
+
+.brand img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+}
