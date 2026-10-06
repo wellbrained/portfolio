@@ -12,6 +12,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable both-edges;
+}
+
+@supports not (scrollbar-gutter: stable) {
+  html {
+    overflow-y: scroll;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -143,6 +153,7 @@ h1 {
 
 .section-heading {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 15px;
@@ -154,9 +165,25 @@ h1 {
   margin: 0;
 }
 
-.section-heading a {
-  font-size: 12px;
+.action-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid #45627d;
+  border-radius: 7px;
+  background: #151d29;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
   color: var(--accent);
+  transition: background-color .2s, border-color .2s;
+}
+
+.action-link:hover {
+  border-color: var(--accent);
+  background: #23364a;
 }
 
 .project-grid {
@@ -245,11 +272,14 @@ h1 {
 }
 
 .tags span {
-  border: 1px solid var(--line);
+  border: 1px solid #45506b;
   border-radius: 5px;
-  padding: 4px 8px;
-  font-size: 10px;
-  color: #b1b8dc;
+  padding: 6px 12px;
+  background: #242b3a;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #d1d7f3;
 }
 
 .journal-row {

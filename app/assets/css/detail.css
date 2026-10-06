@@ -554,7 +554,9 @@
 }
 
 .project-page .back, .article-page .back {
-  display: block;
+  display: inline-flex;
+  font-size: 14px;
+  color: var(--accent);
 }
 
 .project-page .eyebrow, .article-page .eyebrow {

@@ -14,7 +14,7 @@ const dateLabel = computed(() => props.page.date ? new Intl.DateTimeFormat('en-G
     class="article-page"
   >
     <NuxtLink
-      class="back"
+      class="back action-link"
       to="/blog"
     >← All articles</NuxtLink>
     <p class="eyebrow">

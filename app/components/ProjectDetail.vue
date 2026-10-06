@@ -10,7 +10,7 @@ defineProps<{ page: ContentCollectionItem, nextEntry?: ContentCollectionItem }>(
     class="project-page"
   >
     <NuxtLink
-      class="back"
+      class="back action-link"
       to="/projects"
     >← All projects</NuxtLink>
     <p class="eyebrow">
@@ -24,14 +24,17 @@ defineProps<{ page: ContentCollectionItem, nextEntry?: ContentCollectionItem }>(
       <a
         v-if="page.sourceUrl"
         :href="page.sourceUrl"
-        class="outline"
+        class="action-link"
       >View source ↗</a>
       <a
         v-if="page.liveUrl"
         :href="page.liveUrl"
-        class="outline"
+        class="action-link"
       >Visit project ↗</a>
-      <a href="#project-story">Read the story ↓</a>
+      <a
+        class="action-link"
+        href="#project-story"
+      >Read the story ↓</a>
     </div>
     <figure class="hero-figure">
       <img

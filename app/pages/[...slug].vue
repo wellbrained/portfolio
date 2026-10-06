@@ -53,6 +53,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
       <div class="section-heading">
         <h2>Selected work</h2><NuxtLink
           v-if="page.layout === 'home'"
+          class="action-link"
           to="/projects"
         >All projects ↗</NuxtLink>
       </div><WorkListing
@@ -64,6 +65,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
       <div class="section-heading">
         <h2>Journal</h2><NuxtLink
           v-if="page.layout === 'home'"
+          class="action-link"
           to="/blog"
         >All articles ↗</NuxtLink>
       </div><WorkListing
