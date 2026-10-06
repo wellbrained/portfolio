@@ -463,3 +463,13 @@ footer {
 .prose :is(h2, h3) a:hover {
   color: var(--accent);
 }
+
+.error-page {
+  padding: 80px 0 40px;
+  min-height: 50vh;
+}
+
+button.action-link {
+  font-family: inherit;
+  cursor: pointer;
+}

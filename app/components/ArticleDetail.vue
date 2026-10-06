@@ -25,7 +25,7 @@ const dateLabel = computed(() => props.page.date ? new Intl.DateTimeFormat('en-G
     </p>
     <div class="byline">
       <img
-        src="/logo.png?v=1.5"
+        src="/images/portrait-96.webp"
         alt=""
         width="36"
         height="36"

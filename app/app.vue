@@ -34,7 +34,8 @@ const route = useRoute()
       <aside class="profile">
         <img
           class="portrait"
-          src="/logo.png?v=1.5"
+          src="/images/portrait-320.webp"
+          fetchpriority="high"
           alt="Dominik's illustrated portrait"
           width="155"
           height="155"

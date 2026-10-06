@@ -12,8 +12,22 @@ const nextEntry = computed(() => {
   const index = entries?.findIndex(entry => entry.path === path.value) ?? -1
   return index >= 0 ? entries?.[index + 1] : undefined
 })
-useSeoMeta({ title: () => (page.value?.title ?? 'Portfolio') + ' — Dominik Kiessling', description: () => page.value?.description ?? '' })
-useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path.value }] }))
+const siteUrl = 'https://dkiessling.de'
+const title = computed(() => (page.value?.title ?? 'Portfolio') + ' — Dominik Kiessling')
+const ogImage = computed(() => siteUrl + (page.value?.cover?.endsWith('.svg') === false ? page.value.cover : '/images/og-image.jpg'))
+useSeoMeta({
+  title,
+  description: () => page.value?.description ?? '',
+  ogType: () => isArticle.value ? 'article' : 'website',
+  ogSiteName: 'Dominik Kiessling',
+  ogTitle: title,
+  ogDescription: () => page.value?.description ?? '',
+  ogUrl: () => siteUrl + path.value,
+  ogImage,
+  ogImageAlt: () => page.value?.cover?.endsWith('.svg') === false ? page.value.coverAlt : 'Dominik Kiessling — I make things.',
+  twitterCard: 'summary_large_image'
+})
+useHead(() => ({ link: [{ rel: 'canonical', href: siteUrl + path.value }] }))
 </script>
 
 <template>

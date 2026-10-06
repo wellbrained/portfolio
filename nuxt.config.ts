@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'D. Kiessling — Portfolio',
-      meta: [{ name: 'description', content: 'The personal portfolio of D. Kiessling. Projects and more, coming soon.' }],
+      title: 'Dominik Kiessling — Portfolio',
+      meta: [{ name: 'description', content: 'The personal portfolio of Dominik Kiessling: projects, writing and a little about me.' }],
       link: [
         { rel: 'icon', href: '/favicon.ico?v=1.5', sizes: '16x16 32x32' },
         { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png?v=1.5', sizes: '32x32' },
