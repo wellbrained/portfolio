@@ -19,7 +19,7 @@
 }
 
 .project-page .eyebrow {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .13em;
   color: var(--accent);
   font-weight: 500;
@@ -181,7 +181,7 @@
 }
 
 .project-page .body-copy {
-  max-width: 590px;
+  max-width: 640px;
 }
 
 .project-page .body-copy h2 {
@@ -193,7 +193,7 @@
 }
 
 .project-page .body-copy p {
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.85;
   color: var(--muted);
   margin: 0 0 20px;
@@ -298,7 +298,7 @@
   --text: #edf0f6;
   --muted: #a5afbf;
   --line: #293342;
-  --reading-size: 15px;
+  --reading-size: 17px;
   background: var(--bg);
   color: var(--text);
   font-family: 'DM Sans',sans-serif;
@@ -313,7 +313,7 @@
 }
 
 .article-page .eyebrow {
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .13em;
   color: var(--accent);
   font-weight: 500;
@@ -591,18 +591,18 @@
 }
 
 .project-page .body-copy blockquote h3 {
-  font: 500 16px 'DM Sans', sans-serif;
+  font: 500 18px 'DM Sans', sans-serif;
   margin: 0 0 10px;
 }
 
 .project-page .body-copy blockquote p {
-  font-size: 13px;
+  font-size: 16px;
   margin: 0;
 }
 
 .project-page .closing {
   display: block;
-  max-width: 590px;
+  max-width: 640px;
 }
 
 .article-page {

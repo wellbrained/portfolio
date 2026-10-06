@@ -27,7 +27,7 @@ const route = useRoute()
         <NuxtLink
           to="/contact"
           class="contact-link"
-        >Contact ↗</NuxtLink>
+        >Contact</NuxtLink>
       </nav>
     </header>
     <div class="studio-layout">
@@ -53,7 +53,7 @@ const route = useRoute()
         <NuxtLink
           to="/contact"
           class="profile-contact"
-        >Get in touch ↗</NuxtLink>
+        >Get in touch →</NuxtLink>
       </aside>
       <main id="main-content">
         <NuxtPage :page-key="route => route.path" />

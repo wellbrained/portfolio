@@ -21,7 +21,7 @@ useSeoMeta({ title: () => (isNotFound.value ? 'Page not found' : 'Something went
         <NuxtLink
           to="/contact"
           class="contact-link"
-        >Contact ↗</NuxtLink>
+        >Contact</NuxtLink>
       </nav>
     </header>
     <main

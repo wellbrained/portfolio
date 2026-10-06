@@ -27,7 +27,11 @@ useSeoMeta({
   ogImageAlt: () => page.value?.cover?.endsWith('.svg') === false ? page.value.coverAlt : 'Dominik Kiessling — I make things.',
   twitterCard: 'summary_large_image'
 })
-useHead(() => ({ link: [{ rel: 'canonical', href: siteUrl + path.value }] }))
+const person = { '@context': 'https://schema.org', '@type': 'Person', 'name': 'Dominik Kiessling', 'url': siteUrl, 'image': siteUrl + '/images/portrait-320.webp', 'sameAs': ['https://github.com/wellbrained'] }
+useHead(() => ({
+  link: [{ rel: 'canonical', href: siteUrl + path.value }],
+  script: path.value === '/' ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(person) }] : []
+}))
 </script>
 
 <template>
@@ -69,7 +73,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: siteUrl + path.value }] }))
           v-if="page.layout === 'home'"
           class="action-link"
           to="/projects"
-        >All projects ↗</NuxtLink>
+        >All projects →</NuxtLink>
       </div><WorkListing
         :entries="projects || []"
         kind="projects"
@@ -81,7 +85,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: siteUrl + path.value }] }))
           v-if="page.layout === 'home'"
           class="action-link"
           to="/blog"
-        >All articles ↗</NuxtLink>
+        >All articles →</NuxtLink>
       </div><WorkListing
         :entries="articles || []"
         kind="journal"

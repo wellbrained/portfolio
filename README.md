@@ -1,7 +1,12 @@
 # My portfolio
 
-Welcome! I'm Dominik Kiessling, and this is the home of my personal portfolio.
+I'm Dominik Kiessling, and this is the source of my personal portfolio at [dkiessling.de](https://dkiessling.de): projects I build, notes I write and a little about me.
 
-The full website is coming soon. I'll share more about myself, the projects I work on and the ideas I'm exploring here.
+It is built with Nuxt and Nuxt Content. Pages, projects and articles are Markdown files in `content/`.
 
-Visit [dkiessling.de](https://dkiessling.de) — there's more to come.
+```sh
+pnpm install
+pnpm dev     # http://localhost:3006
+pnpm test    # content checks
+pnpm build
+```

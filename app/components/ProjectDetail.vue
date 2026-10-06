@@ -42,6 +42,8 @@ defineProps<{ page: ContentCollectionItem, nextEntry?: ContentCollectionItem }>(
         class="cover-image"
         :src="page.cover"
         :alt="page.coverAlt || ''"
+        :width="page.coverWidth"
+        :height="page.coverHeight"
       >
       <div
         v-else
@@ -80,7 +82,7 @@ defineProps<{ page: ContentCollectionItem, nextEntry?: ContentCollectionItem }>(
       :to="nextEntry?.path || '/projects'"
       class="closing"
     >
-      <span>Continue exploring</span><h3>{{ nextEntry?.title || 'All projects' }} <span>↗</span></h3><p>{{ nextEntry?.description || 'More projects and the stories behind them.' }}</p>
+      <span>Continue exploring</span><h3>{{ nextEntry?.title || 'All projects' }} <span aria-hidden="true">→</span></h3><p>{{ nextEntry?.description || 'More projects and the stories behind them.' }}</p>
     </NuxtLink>
   </article>
 </template>
