@@ -7,7 +7,7 @@ const publicDir = join(import.meta.dirname, '..', 'public')
 
 const files = readdirSync(contentDir, { recursive: true, encoding: 'utf8' }).filter(file => file.endsWith('.md'))
 const pages = files.map((file) => {
-  const source = readFileSync(join(contentDir, file), 'utf8')
+  const source = readFileSync(join(contentDir, file), 'utf8').replace(/\r\n/g, '\n')
   const path = '/' + relative('.', file).replace(/\\/g, '/').replace(/\.md$/, '').replace(/(^|\/)index$/, '')
   return { file, source, path: path === '/' ? '/' : path.replace(/\/$/, '') }
 })
