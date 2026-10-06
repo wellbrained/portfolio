@@ -272,14 +272,13 @@ h1 {
 }
 
 .tags span {
-  border: 1px solid #45506b;
-  border-radius: 5px;
-  padding: 6px 12px;
-  background: #242b3a;
-  font-size: 14px;
+  border-radius: 4px;
+  padding: 3px 8px;
+  background: #1b2938;
+  font-size: 12px;
   font-weight: 500;
   line-height: 1.5;
-  color: #d1d7f3;
+  color: var(--accent);
 }
 
 .journal-row {
