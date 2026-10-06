@@ -72,7 +72,8 @@ h1,h2,h3,p {
 .site-header nav {
   display: flex;
   gap: 24px;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -103,19 +104,19 @@ h1,h2,h3,p {
 }
 
 .profile-name {
-  font-size: 15px;
+  font-size: 16px;
   margin: 18px 0 12px;
 }
 
 .profile-description {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--muted);
   line-height: 1.8;
 }
 
 .profile-contact {
   display: block;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--accent);
   margin-top: 26px;
 }
