@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" fill="none">
+  <rect width="900" height="460" fill="#1b3042"/>
+  <circle cx="810" cy="55" r="210" fill="#243e54"/>
+  <rect x="72" y="58" width="756" height="344" rx="14" fill="#111c27" stroke="#3a5267"/>
+  <g font-family="sans-serif">
+    <text x="105" y="105" fill="#a0d3f3" font-size="22" font-weight="600">CoreHub</text>
+    <text x="715" y="105" fill="#a5afbf" font-size="14">Projects</text>
+    <path d="M786 90v18m-9-9h18" stroke="#a0d3f3" stroke-width="2"/>
+    <path d="M105 129h690" stroke="#293342"/>
+    <rect x="105" y="155" width="214" height="158" rx="8" fill="#1b2a39"/>
+    <rect x="343" y="155" width="214" height="158" rx="8" fill="#1b2a39"/>
+    <rect x="581" y="155" width="214" height="158" rx="8" fill="#1b2a39"/>
+    <circle cx="127" cy="182" r="4" fill="#a0d3f3"/>
+    <circle cx="365" cy="182" r="4" fill="#b1b8dc"/>
+    <circle cx="603" cy="182" r="4" fill="#a0d3f3"/>
+    <text x="140" y="187" fill="#edf0f6" font-size="16">Portfolio</text>
+    <text x="378" y="187" fill="#edf0f6" font-size="16">TabiGo</text>
+    <text x="616" y="187" fill="#edf0f6" font-size="16">Next idea</text>
+    <text x="123" y="225" fill="#a5afbf" font-size="12">A place for what I create.</text>
+    <text x="361" y="225" fill="#a5afbf" font-size="12">A little Japanese.</text>
+    <text x="599" y="225" fill="#a5afbf" font-size="12">Room to explore.</text>
+    <rect x="123" y="251" width="178" height="40" rx="5" fill="#243e54"/>
+    <rect x="361" y="251" width="178" height="40" rx="5" fill="#29334b"/>
+    <rect x="599" y="251" width="178" height="40" rx="5" fill="#243e54"/>
+    <text x="135" y="276" fill="#a0d3f3" font-size="11">Refine the next story</text>
+    <text x="373" y="276" fill="#b1b8dc" font-size="11">Try a short session</text>
+    <text x="611" y="276" fill="#a0d3f3" font-size="11">Capture the first thought</text>
+    <text x="105" y="362" fill="#a5afbf" font-size="12">Projects · Thoughts · Next steps</text>
+    <text x="665" y="362" fill="#6d8295" font-size="10">CONCEPT ILLUSTRATION</text>
+  </g>
+</svg>

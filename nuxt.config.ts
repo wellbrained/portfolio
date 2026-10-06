@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  css: ['@fontsource/dm-sans/400.css', '@fontsource/dm-sans/500.css', '@fontsource/space-grotesk/500.css', '@fontsource/space-grotesk/700.css', '~/assets/css/main.css'],
+  css: ['@fontsource/dm-sans/400.css', '@fontsource/dm-sans/500.css', '@fontsource/space-grotesk/400.css', '@fontsource/space-grotesk/500.css', '@fontsource/space-grotesk/600.css', '@fontsource/space-grotesk/700.css', '~/assets/css/main.css', '~/assets/css/detail.css'],
   content: { database: { type: 'sqlite', filename: ':memory:' } },
   compatibilityDate: '2026-10-05',
   nitro: { preset: 'node-server' },

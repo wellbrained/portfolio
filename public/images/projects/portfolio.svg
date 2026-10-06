@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" fill="none">
+  <rect width="900" height="460" fill="#202c3b"/>
+  <circle cx="845" cy="444" r="237" fill="#30354c"/>
+  <rect x="71" y="50" width="758" height="360" rx="14" fill="#10141c" stroke="#43526a"/>
+  <g font-family="sans-serif">
+    <text x="104" y="95" fill="#edf0f6" font-size="23" font-weight="600">DK.</text>
+    <text x="626" y="90" fill="#a5afbf" font-size="11">Projects</text>
+    <text x="692" y="90" fill="#a5afbf" font-size="11">Articles</text>
+    <text x="756" y="90" fill="#a0d3f3" font-size="11">Contact</text>
+    <path d="M104 116h692M269 140v231" stroke="#293342"/>
+    <rect x="104" y="143" width="94" height="94" rx="10" fill="#29334b"/>
+    <circle cx="151" cy="176" r="16" fill="#b1b8dc"/>
+    <path d="M121 217c0-20 14-28 30-28s30 8 30 28" fill="#7e8ba9"/>
+    <text x="104" y="270" fill="#edf0f6" font-size="13">Dominik Kiessling</text>
+    <text x="104" y="297" fill="#a5afbf" font-size="10">Curious by nature.</text>
+    <text x="104" y="315" fill="#a5afbf" font-size="10">Making things by choice.</text>
+    <path d="M104 343h24" stroke="#a0d3f3" stroke-width="2"/>
+    <text x="299" y="154" fill="#a0d3f3" font-size="10">PERSONAL STUDIO</text>
+    <text x="299" y="199" fill="#edf0f6" font-size="34" font-weight="600">I MAKE</text>
+    <text x="299" y="239" fill="#a0d3f3" font-size="34" font-weight="600">THINGS.</text>
+    <rect x="299" y="267" width="232" height="102" rx="7" fill="#1b3042" stroke="#293342"/>
+    <rect x="550" y="267" width="232" height="102" rx="7" fill="#252a42" stroke="#343e56"/>
+    <text x="321" y="304" fill="#a0d3f3" font-size="14">CoreHub</text>
+    <text x="572" y="304" fill="#b1b8dc" font-size="14">TabiGo</text>
+    <path d="M321 326h153M321 341h99" stroke="#48627a" stroke-width="5"/>
+    <path d="M572 326h151M572 341h94" stroke="#4b536c" stroke-width="5"/>
+  </g>
+</svg>

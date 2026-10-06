@@ -1,9 +1,9 @@
 ---
 layout: projects
 title: Projects
-description: Selected work and the stories behind it. Real case studies coming soon.
+description: Personal tools, useful experiments and the stories behind them.
 ---
 
-This will be a selection of my work, with a closer look at the ideas, decisions and lessons behind each project.
+Different ideas, one common thread: making something useful and learning along the way.
 
-Real case studies are coming soon. The example below is a starting point for the format.
+These three sample case studies show how the portfolio will present the idea, approach and outcome of each project.

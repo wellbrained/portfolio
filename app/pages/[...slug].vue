@@ -17,62 +17,39 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
 </script>
 
 <template>
+  <ProjectDetail
+    v-if="page && isProject"
+    :page="page"
+    :next-entry="nextEntry"
+  />
+  <ArticleDetail
+    v-else-if="page && isArticle"
+    :page="page"
+    :next-entry="nextEntry"
+  />
   <article
-    v-if="page"
-    :class="['page', { 'article-page': isArticle }]"
+    v-else-if="page"
+    class="page"
   >
     <header class="page-heading">
-      <NuxtLink
-        v-if="isProject || isArticle"
-        class="back-link"
-        :to="isProject ? '/projects' : '/blog'"
-      >← {{ isProject ? 'All projects' : 'Journal' }}</NuxtLink><p class="eyebrow">
-        {{ page.layout === 'home' ? 'Personal studio' : isProject ? 'Selected work' : isArticle ? 'Journal' : 'DK. / Personal studio' }}
-      </p><h1>{{ page.title }}</h1><p class="lead">
-        {{ page.description }}
-      </p><div
-        v-if="isArticle"
-        class="byline"
-      >
-        <img
-          src="/logo.png?v=1.5"
-          alt=""
-          width="36"
-          height="36"
-        ><span>Dominik Kiessling</span><time
-          v-if="page.date"
-          :datetime="page.date"
-        >{{ page.date }}</time><span v-if="page.readingTime">{{ page.readingTime }} min read</span>
-      </div>
-    </header><template v-if="isProject">
-      <div class="project-cover detail-cover">
-        <img
-          v-if="page.cover"
-          :src="page.cover"
-          :alt="page.coverAlt || ''"
-        ><span
-          v-else
-          class="cover-placeholder"
-        >{{ page.title }}<small>Example project cover</small></span>
-      </div><dl class="project-facts">
-        <div><dt>Role</dt><dd>{{ page.role || 'Coming soon' }}</dd></div><div><dt>Tools</dt><dd>{{ page.tools?.join(' · ') || 'Coming soon' }}</dd></div><div><dt>Focus</dt><dd>{{ page.focus || 'Coming soon' }}</dd></div>
-      </dl>
-    </template><nav
-      v-if="isArticle && page.body.toc?.links.length"
-      class="article-toc"
-      aria-label="In this article"
-    >
       <p class="eyebrow">
-        In this article
-      </p><a
-        v-for="link in page.body.toc.links"
-        :key="link.id"
-        :href="'#' + link.id"
-      >{{ link.text }}</a>
-    </nav><ContentRenderer
+        {{ page.layout === 'home' ? 'Personal studio' : 'DK. / Personal studio' }}
+      </p><h1
+        v-if="page.layout === 'home'"
+        class="home-title"
+      >
+        I make <span>things.</span>
+      </h1><h1 v-else>
+        {{ page.title }}
+      </h1><p class="lead">
+        {{ page.description }}
+      </p>
+    </header>
+    <ContentRenderer
       :value="page"
       class="prose"
-    /><template v-if="page.layout === 'home' || page.layout === 'projects'">
+    />
+    <template v-if="page.layout === 'home' || page.layout === 'projects'">
       <div class="section-heading">
         <h2>Selected work</h2><NuxtLink
           v-if="page.layout === 'home'"
@@ -82,7 +59,8 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
         :entries="projects || []"
         kind="projects"
       />
-    </template><template v-if="page.layout === 'home' || page.layout === 'journal'">
+    </template>
+    <template v-if="page.layout === 'home' || page.layout === 'journal'">
       <div class="section-heading">
         <h2>Journal</h2><NuxtLink
           v-if="page.layout === 'home'"
@@ -92,18 +70,6 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
         :entries="articles || []"
         kind="journal"
       />
-    </template><div
-      v-if="(isArticle || isProject) && page.tags?.length"
-      class="tags detail-tags"
-    >
-      <span
-        v-for="tag in page.tags"
-        :key="tag"
-      >{{ tag }}</span>
-    </div><NuxtLink
-      v-if="nextEntry"
-      :to="nextEntry.path"
-      class="next-entry"
-    ><span class="eyebrow">{{ isProject ? 'Next project' : 'Next article' }}</span><strong>{{ nextEntry.title }} →</strong></NuxtLink>
+    </template>
   </article>
 </template>

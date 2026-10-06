@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const route = useRoute()
+</script>
+
 <template>
   <div class="studio-shell">
     <a
@@ -11,8 +15,14 @@
         aria-label="DK. home"
       >DK.</NuxtLink>
       <nav aria-label="Main navigation">
-        <NuxtLink to="/projects">Projects</NuxtLink>
-        <NuxtLink to="/blog">Journal</NuxtLink>
+        <NuxtLink
+          to="/projects"
+          :class="{ 'is-active': route.path.startsWith('/projects') }"
+        >Projects</NuxtLink>
+        <NuxtLink
+          to="/blog"
+          :class="{ 'is-active': route.path.startsWith('/blog') }"
+        >Articles</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
         <NuxtLink
           to="/contact"
@@ -33,7 +43,11 @@
           Dominik Kiessling
         </p>
         <p class="profile-description">
-          A personal space for things I create, explore and learn.
+          Curious by nature.<br>Making things by choice.
+        </p>
+        <div class="short-rule" />
+        <p class="profile-note">
+          Projects, thoughts<br>and a little about me.
         </p>
         <NuxtLink
           to="/contact"

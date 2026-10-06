@@ -1,23 +1,41 @@
 ---
 layout: article
-readingTime: 1
-title: A fresh start
-description: An example first post introducing this portfolio.
+example: true
+readingTime: 2
+title: A fresh start.
+description: A place to collect projects, and the stories behind them.
+subtitle: |-
+  A place to collect projects,
+  and the stories behind them.
 date: '2026-10-05'
 tags:
-  - personal
+  - Personal
+  - Making things
 ---
 
-*Example post — a starting point to edit in your own voice.*
+Some projects begin with a clear plan. Others start with a small question: what if I tried this?
 
-Welcome to my portfolio. I'm building a place to share my projects and the things I learn while working on them.
+This portfolio is a place for both. The things that become useful, the experiments that teach me something, and the decisions I want to remember along the way.
 
-## What you'll find here
+## Why make a place for it?
 
-Over time, I'll add selected work, a little about myself and occasional notes about the process.
+A finished project tells only part of the story. The interesting part is often the path that led there: an early sketch, an awkward first version, or a decision that made everything simpler.
 
-## What's next
+I want to keep some of that here, alongside the work itself.
 
-The full site is still taking shape. For now, this is the beginning.
+> The finished thing matters.\
+> So does everything you learn making it.
 
-[Back to the journal](/blog)
+## Showing the process
+
+Project pages will have room for the problem, the approach and the result. Articles can explore one smaller idea without needing to become a complete case study.
+
+Not every post needs a big conclusion. Sometimes a useful observation is enough.
+
+## One step at a time
+
+The site will grow as I add work and refine what I want to say about it. For now, this is the beginning.
+
+::sample-note
+This is example copy for the reading layout. Replace it with your own voice and experience.
+::

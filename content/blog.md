@@ -1,9 +1,9 @@
 ---
 layout: journal
 title: Journal
-description: Notes, ideas and things I learn along the way. More coming soon.
+description: Notes on making things, following ideas and learning along the way.
 ---
 
-A space for notes, ideas and things I learn along the way.
+A place for the smaller stories behind the work: the first spark of an idea, a decision that helped, or something worth remembering.
 
-More is coming soon. The first entry below is a starter you can refine or replace.
+The entries below are sample articles while I find the shape of the journal.

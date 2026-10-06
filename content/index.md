@@ -1,9 +1,9 @@
 ---
 layout: home
-title: A place for what I create.
-description: The personal portfolio of D. Kiessling.
+title: I make things.
+description: Projects I build. Ideas I explore. Things I learn.
 ---
 
-My personal portfolio is taking shape. Selected projects, ideas and a little about me will live here soon.
+I like turning a small idea into something useful. This is my space for personal tools, experiments and the stories behind them.
 
-[Explore my projects](/projects) · [About me](/about) · [Read the journal](/blog) · [Get in touch](/contact)
+[A little about me](/about) · [Get in touch](/contact)
