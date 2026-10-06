@@ -151,7 +151,8 @@
 }
 
 .project-page figcaption {
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 1.6;
   color: var(--muted);
   margin-top: 10px;
 }
@@ -166,13 +167,14 @@
 }
 
 .project-page dt {
-  font-size: 10px;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--muted);
   margin-bottom: 8px;
 }
 
 .project-page dd {
-  font-size: 11px;
+  font-size: 15px;
   line-height: 1.6;
   margin: 0;
   color: var(--text);
@@ -198,7 +200,7 @@
 }
 
 .project-page .body-copy .sample-note {
-  font-size: 11px;
+  font-size: 14px;
   color: #b1b8dc;
 }
 
@@ -208,7 +210,7 @@
 
 .project-page .section-heading span {
   display: block;
-  font-size: 10px;
+  font-size: 14px;
   color: var(--accent);
   margin: -5px 0 18px;
 }
@@ -237,7 +239,7 @@
 }
 
 .project-page .closing>span {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -255,7 +257,7 @@
 }
 
 .project-page .closing p {
-  font-size: 12px;
+  font-size: 14px;
   margin: 0;
 }
 
@@ -348,14 +350,14 @@
 }
 
 .article-page .byline strong {
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 500;
   display: block;
   margin-bottom: 5px;
 }
 
 .article-page .byline span {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -390,14 +392,14 @@
 }
 
 .article-page .contents span {
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: .11em;
   color: var(--muted);
   margin-bottom: 3px;
 }
 
 .article-page .contents a {
-  font-size: 12px;
+  font-size: 14px;
   color: var(--accent);
 }
 
@@ -420,7 +422,7 @@
 }
 
 .article-page .reading .sample-note {
-  font-size: 11px;
+  font-size: 14px;
   color: #b1b8dc;
 }
 
@@ -432,7 +434,7 @@
 }
 
 .project-page .body-copy .section-note {
-  font-size: 10px;
+  font-size: 14px;
   color: var(--accent);
   margin: -5px 0 18px;
 }
@@ -453,7 +455,7 @@
   justify-content: space-between;
   gap: 16px;
   margin-top: 32px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -470,7 +472,7 @@
 }
 
 .article-page .next-read p {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
   margin: 0 0 13px;
 }
@@ -490,7 +492,7 @@
 }
 
 .article-page .next-read>span {
-  font-size: 11px;
+  font-size: 14px;
   color: var(--muted);
 }
 
@@ -578,7 +580,7 @@
 }
 
 .project-page .body-copy > p:first-child {
-  font-size: 11px;
+  font-size: 14px;
   color: #b1b8dc;
 }
 
