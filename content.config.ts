@@ -12,6 +12,8 @@ export default defineContentConfig({
         subtitle: z.string().optional(),
         cover: z.string().optional(),
         coverAlt: z.string().optional(),
+        coverWidth: z.number().default(900),
+        coverHeight: z.number().default(460),
         role: z.string().optional(),
         tools: z.array(z.string()).default([]),
         focus: z.string().optional(),

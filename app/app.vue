@@ -27,14 +27,15 @@ const route = useRoute()
         <NuxtLink
           to="/contact"
           class="contact-link"
-        >Contact ↗</NuxtLink>
+        >Contact</NuxtLink>
       </nav>
     </header>
     <div class="studio-layout">
       <aside class="profile">
         <img
           class="portrait"
-          src="/logo.png?v=1.5"
+          src="/images/portrait-320.webp"
+          fetchpriority="high"
           alt="Dominik's illustrated portrait"
           width="155"
           height="155"
@@ -52,7 +53,7 @@ const route = useRoute()
         <NuxtLink
           to="/contact"
           class="profile-contact"
-        >Get in touch ↗</NuxtLink>
+        >Get in touch →</NuxtLink>
       </aside>
       <main id="main-content">
         <NuxtPage :page-key="route => route.path" />

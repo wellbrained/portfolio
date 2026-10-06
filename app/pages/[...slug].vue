@@ -12,8 +12,26 @@ const nextEntry = computed(() => {
   const index = entries?.findIndex(entry => entry.path === path.value) ?? -1
   return index >= 0 ? entries?.[index + 1] : undefined
 })
-useSeoMeta({ title: () => (page.value?.title ?? 'Portfolio') + ' — Dominik Kiessling', description: () => page.value?.description ?? '' })
-useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path.value }] }))
+const siteUrl = 'https://dkiessling.de'
+const title = computed(() => (page.value?.title ?? 'Portfolio') + ' — Dominik Kiessling')
+const ogImage = computed(() => siteUrl + (page.value?.cover?.endsWith('.svg') === false ? page.value.cover : '/images/og-image.jpg'))
+useSeoMeta({
+  title,
+  description: () => page.value?.description ?? '',
+  ogType: () => isArticle.value ? 'article' : 'website',
+  ogSiteName: 'Dominik Kiessling',
+  ogTitle: title,
+  ogDescription: () => page.value?.description ?? '',
+  ogUrl: () => siteUrl + path.value,
+  ogImage,
+  ogImageAlt: () => page.value?.cover?.endsWith('.svg') === false ? page.value.coverAlt : 'Dominik Kiessling — I make things.',
+  twitterCard: 'summary_large_image'
+})
+const person = { '@context': 'https://schema.org', '@type': 'Person', 'name': 'Dominik Kiessling', 'url': siteUrl, 'image': siteUrl + '/images/portrait-320.webp', 'sameAs': ['https://github.com/wellbrained'] }
+useHead(() => ({
+  link: [{ rel: 'canonical', href: siteUrl + path.value }],
+  script: path.value === '/' ? [{ type: 'application/ld+json', innerHTML: JSON.stringify(person) }] : []
+}))
 </script>
 
 <template>
@@ -55,7 +73,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
           v-if="page.layout === 'home'"
           class="action-link"
           to="/projects"
-        >All projects ↗</NuxtLink>
+        >All projects →</NuxtLink>
       </div><WorkListing
         :entries="projects || []"
         kind="projects"
@@ -67,7 +85,7 @@ useHead(() => ({ link: [{ rel: 'canonical', href: 'https://dkiessling.de' + path
           v-if="page.layout === 'home'"
           class="action-link"
           to="/blog"
-        >All articles ↗</NuxtLink>
+        >All articles →</NuxtLink>
       </div><WorkListing
         :entries="articles || []"
         kind="journal"

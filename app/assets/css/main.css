@@ -13,7 +13,7 @@
 }
 
 html {
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 @supports not (scrollbar-gutter: stable) {
@@ -130,7 +130,7 @@ h1,h2,h3,p {
 }
 
 .eyebrow {
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .16em;
   color: var(--accent);
@@ -203,7 +203,23 @@ h1 {
 
 .project-card:hover {
   border-color: var(--accent);
-  transform: translateY(-3px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+}
+
+/* An odd last card spans the full row with its cover beside the text. */
+.project-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card:last-child:nth-child(odd) .entry-copy {
+  align-self: center;
 }
 
 .project-cover {
@@ -261,7 +277,7 @@ h1 {
 
 .entry-copy p:not(.eyebrow) {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.7;
   margin-bottom: 14px;
 }
@@ -300,7 +316,7 @@ h1 {
 }
 
 .prose {
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.9;
   color: #c7ceda;
   overflow-wrap: anywhere;
@@ -359,7 +375,7 @@ footer {
   margin-top: 70px;
   padding-top: 24px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
 }
 
 .skip-link {
@@ -378,18 +394,21 @@ footer {
 
 @media (max-width: 760px) {
   .studio-shell {
-    padding: 23px;
+    padding: 20px;
   }
 
   .site-header {
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 12px 18px;
   }
 
   .site-header nav {
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
-    margin-left: auto;
+  }
+
+  .studio-shell:has(.project-page, .article-page) .profile {
+    display: none;
   }
 
   .studio-layout {
@@ -442,6 +461,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .project-card:last-child:nth-child(odd) {
+    display: block;
+  }
+
   h1 {
     font-size: 36px;
   }
@@ -462,4 +485,14 @@ footer {
 
 .prose :is(h2, h3) a:hover {
   color: var(--accent);
+}
+
+.error-page {
+  padding: 80px 0 40px;
+  min-height: 50vh;
+}
+
+button.action-link {
+  font-family: inherit;
+  cursor: pointer;
 }

@@ -25,7 +25,7 @@ const dateLabel = computed(() => props.page.date ? new Intl.DateTimeFormat('en-G
     </p>
     <div class="byline">
       <img
-        src="/logo.png?v=1.5"
+        src="/images/portrait-96.webp"
         alt=""
         width="36"
         height="36"
@@ -70,6 +70,6 @@ const dateLabel = computed(() => props.page.date ? new Intl.DateTimeFormat('en-G
     <NuxtLink
       :to="nextEntry?.path || '/blog'"
       class="next-read"
-    ><p>Continue reading</p><h3>{{ nextEntry?.title || 'Back to the journal' }} <span>↗</span></h3><span>{{ nextEntry?.description || 'More notes and stories as the site grows.' }}</span></NuxtLink>
+    ><p>Continue reading</p><h3>{{ nextEntry?.title || 'Back to the journal' }} <span aria-hidden="true">→</span></h3><span>{{ nextEntry?.description || 'More notes and stories as the site grows.' }}</span></NuxtLink>
   </article>
 </template>
