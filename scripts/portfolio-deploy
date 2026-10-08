@@ -25,4 +25,11 @@ if [ "$healthy" != true ]; then
   echo 'Health check failed; previous release restored when available.' >&2
   exit 1
 fi
+# Older releases go, except the running and the previous one (as Mei and BudgetTrack)
+keep=3
+ls -1dt /srv/portfolio/releases/*/ | tail -n +$((keep + 1)) | while read -r old; do
+  old="${old%/}"
+  [ "$old" = "$(readlink -f /srv/portfolio/current)" ] || [ "$old" = "$(readlink -f /srv/portfolio/previous)" ] || rm -rf "$old"
+done
+rm -f "/tmp/portfolio-$release.tar.gz"
 echo "Deployed $release"
