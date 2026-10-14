@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+useHead({ script: [{ src: '/connection-status.js', defer: true }] })
 </script>
 
 <template>
