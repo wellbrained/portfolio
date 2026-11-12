@@ -6,7 +6,7 @@ export default defineNuxtConfig({
       htmlAttrs: { lang: 'en' },
       title: 'Dominik Kiessling — Portfolio',
       meta: [{ name: 'description', content: 'The personal portfolio of Dominik Kiessling: projects, writing and a little about me.' }],
-      script: [{ 'src': 'https://stats.dkiessling.de/script.js', 'defer': true, 'data-website-id': '9e1186cd-0cac-4c1e-a240-70cf8ecde19e', 'data-domains': 'dkiessling.de' }],
+      script: [{ 'src': 'https://stats.dkiessling.de/script.js', 'defer': true, 'data-website-id': '9e1186cd-0cac-4c1e-a240-70cf8ecde19e', 'data-domains': 'dkiessling.de', 'data-do-not-track': 'true' }],
       link: [
         { rel: 'icon', href: '/favicon.ico?v=1.5', sizes: '16x16 32x32' },
         { rel: 'icon', type: 'image/png', href: '/favicon-32x32.png?v=1.5', sizes: '32x32' },
