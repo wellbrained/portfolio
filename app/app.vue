@@ -60,6 +60,11 @@ useHead({ script: [{ src: '/connection-status.js', defer: true }] })
         <NuxtPage :page-key="route => route.path" />
       </main>
     </div>
-    <footer><span>Dominik Kiessling · Portfolio in progress</span><a href="https://github.com/wellbrained">GitHub ↗</a></footer>
+    <footer>
+      <span>Dominik Kiessling · Portfolio in progress</span><a
+        href="https://github.com/wellbrained"
+        data-umami-event="github-click"
+      >GitHub ↗</a>
+    </footer>
   </div>
 </template>

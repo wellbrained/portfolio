@@ -24,11 +24,15 @@ defineProps<{ page: ContentCollectionItem, nextEntry?: ContentCollectionItem }>(
       <a
         v-if="page.sourceUrl"
         :href="page.sourceUrl"
+        data-umami-event="project-source-click"
+        :data-umami-event-project="page.path.split('/').pop()"
         class="action-link"
       >View source ↗</a>
       <a
         v-if="page.liveUrl"
         :href="page.liveUrl"
+        data-umami-event="project-visit-click"
+        :data-umami-event-project="page.path.split('/').pop()"
         class="action-link"
       >Visit project ↗</a>
       <a
